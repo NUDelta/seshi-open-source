@@ -1,0 +1,12 @@
+{
+  "packages": {
+    "bootstrap-3": {},
+    "jquery-ui": {},
+    "font-awesome": {},
+    "easy-search": {},
+    "iron-router": {},
+    "kadira": {},
+    "spin": {},
+    "streams": {}
+  }
+}

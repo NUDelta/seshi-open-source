@@ -1,0 +1,70 @@
+<template name="opty">
+  <div class="container-fluid">
+    <div class="row">
+      <div id="opt-left" class="col-md-3">
+	<h4>Session List</h4>
+	{{#each sessions}}
+	<div class='opt-session'>
+	  <b>{{name}}</b>
+	  {{#each sessionPapers}}
+	  <div class="opt-paper">
+	    <b>{{_id}}</b>: {{title}}
+	  </div>
+	  {{/each}}
+	</div>
+	{{/each}}
+      </div>
+      <div id="opt-main" class="col-md-6">
+	<h4>Optimizer</h4>
+	<button class='btn btn-primary' id='opt-button'>Optimize session assignment</button>
+	<button class='btn btn-warning' id='clearAllOpt'>clear results</button>
+	<div class='overall-summary'>
+	  {{{getOverallSummary}}}
+	</div>
+	{{#each optSessions}}
+	<div>
+	  <a class='trial-run'>Run #{{this.index}}</a> (score: {{score}})
+	  <div class='trial'>
+	    <div class='summary'>
+	      {{{getSummary}}}
+	    </div>
+	    <div class="opt-sessions">
+	      {{#each optSession}}
+	      <div class='opt-session'>
+		<b>{{name}} [{{score}}]</b>
+		<div>{{reasons}}</div>
+		{{#each sessionPapers}}
+		<div class="opt-paper">
+		  <b>{{_id}}</b>: {{title}}
+		</div>
+		{{/each}}
+	      </div>
+	      {{/each}}
+	    </div>
+	  </div>
+	</div>
+	{{/each}}
+      </div>
+	
+      <div id="opt-used" class="col-md-3">
+	<h4>Used count</h4>
+	<div id='use-counts'>
+	  {{#each getUsedCount}}
+	  <div id='use-counts-box'>
+	    {{id}}: {{useCount}} 
+	  </div>
+	  {{/each}}
+	</div>
+	<h4>Used in approved session count</h4>
+	<div id='approved-use-counts'>
+	  {{#each getApprovedCount}}
+	  <div id='approved-use-counts-box'>
+	    {{id}}: {{useCount}} 
+	  </div>
+	  {{/each}}
+	</div>
+	
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,70 @@
+<template name="login">
+  <div class="loginpage">
+    <div class="welcome">
+      <h2>Hi! You will be using <b>Seshi</b>, a tool for making paper sessions for CSCW</h2>
+      <h4>Seshi is built and designed by researchers at Northwestern, MIT, and CMU. The log data collected while using Seshi will be analyzed for research purposes and in anonymized form only. No names or personal identifiers will be associated with the data for analysis or publication purposes. After using Seshi, we will send you a follow-up email with a few short questions to get your feedback, participation optional. Should you have any concerns about the use of the collected data, please speak to Steven Dow or Haoqi Zhang before continuing.
+      </h4>
+    </div>
+    
+    <div class="login">
+
+
+      <form class="form-horizontal" id="register-form" action="action">
+	<div class="control-group">
+	  <label class="control-label" for="account-name">Name</label>
+	  <div class="controls">
+	    <input type="name" id="account-name" placeholder="First and last name"  size="30">
+	  </div>
+	</div>
+	
+	<div class="control-group">
+	  <label class="control-label" for="account-email">Email</label>
+    <div class="controls">
+      <input type="email" id="account-email" placeholder="Email"  size="30">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="account-password">Password</label>
+    <div class="controls">
+      <input type="password" id="account-password" placeholder="Password"  size="30">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="secret-code">Our secret</label>
+    <div class="controls">
+      <input type="text" id="secret-code" placeholder="What we announced"  size="30">
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <br/>
+    <button type="submit" id="create-account" class="btn btn-primary">Create an account</button>
+  </div>
+      </form>
+      <br/><br/>
+      Been here before? <a class="showLogin">Log in below.</a>
+      <div style="display:none" id="loghere">
+	<form class="form-horizontal" id="login-form" action="action">
+	  <div class="control-group">
+	    <label class="control-label" for="login-email">Email</label>
+	    <div class="controls">
+	      <input type="email" id="login-email" placeholder="Email"  size="30">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label class="control-label" for="login-password">Password</label>
+	    <div class="controls">
+	      <input type="password" id="login-password" placeholder="password"  size="30">
+	    </div>
+	  </div>
+	  <div class="control-group">	  
+	    <br/>
+	    <button type="submit" id="login-button" class="btn btn-primary">Sign in</button>
+	  </div>
+	</form> 
+      </div>
+    </div>
+  </div>
+</template>

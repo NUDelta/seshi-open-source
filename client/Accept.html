@@ -1,0 +1,30 @@
+<template name="accept">
+  <div class="row">
+    <div id="aleft" class="col-md-6">
+      <h3>Papers in Seshi</h3>
+      <div class='aleftcontent'>
+	<div>{{paperCount}} total papers, of which {{activeCount}} are active/accepted.</div>
+	<div id='theseshilist'>
+	  <div id='activeList'>
+	    {{#each activePapers}}
+	    <div>{{_id}}</div>
+	    {{/each}}
+	  </div>
+	  <div id='inactiveList'>
+	    {{#each inactivePapers}}
+	    <div>{{_id}}</div>
+	    {{/each}}
+	  </div>
+	</div>
+      </div>
+    </div>
+    
+    <div id="aright" class="col-md-6">
+      <div><b>Paste in the IDs of accepted papers:</b></div>
+      <textarea rows='40' class='accept-text'></textarea>
+      <div>
+	<button class='submitAcceptedList'>Submit</button>
+      </div>
+    </div>
+  </div>
+</template>

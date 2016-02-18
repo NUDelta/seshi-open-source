@@ -1,0 +1,33 @@
+#inactiveList{
+    color:red;
+}
+
+#activeList {
+    color:green;
+}
+
+.accept-text {
+    width: 500px;
+    height: 600px;
+    overflow: auto;
+}
+
+#theseshilist {
+    height: 500px;
+    overflow: auto;
+    border: 1px solid;
+    padding: 15px;
+}
+
+#aleft, #aright {
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.aleftcontent{
+    margin: 10px;
+}

@@ -1,0 +1,15 @@
+#use-counts, #approved-use-counts {
+    height: 400px;
+    overflow: auto;
+    border: solid 1px;
+}
+
+#opt-main .overall-summary {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.trial {
+    display: none;
+}
