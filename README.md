@@ -13,6 +13,8 @@ Some packages you will probably need (or at least, are in use now):
 -     sacha:spin               2.3.1  Simple spinner package for Meteor
 
 
+================================================================================
+
 The MIT License (MIT)
 Copyright (c) 2016 Haoqi Zhang
 
