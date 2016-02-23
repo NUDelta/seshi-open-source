@@ -11,15 +11,20 @@ Template.accept.events({
     
 });
 
+
+activePapers = function(){
+    return Papers.find({active: true});
+}
+
 Template.accept.helpers({
     activePapers: function(){
-	return Papers.find({active: true});
+	return activePapers();
     },
     inactivePapers: function(){
 	return Papers.find({active: false});
     },
     activeCount: function(){
-	return Template.accept.activePapers().count();
+	return activePapers().count();
     },
     paperCount: function(){
 	return Papers.find().count();
