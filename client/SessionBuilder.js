@@ -793,33 +793,6 @@ Template.SessionBuilder.helpers({
 	    }
 	    return count;
 	}
-	    
-	
-	// var showUnapproved = Session.get("showUnapprovedSessions");
-	// var showValid = Session.get("showValidSessions");
-	// var nullNames = ["Session not yet named", "Not named yet", "", " ", "  ", "   ", undefined];
-	// var sessions;
-	// if(!Template.SessionBuilder.sessionInputIsNotEmpty()){
-	//     sessionsCursor = Sessions.find({name: {$not: {$in: nullNames}}});
-	//     sessionsCursor.observeChanges({
-	// 	added: function(id, fields){
-	// 	    console.log("culprit, 'added', id");
-	// 	}
-	//     });
-	    
-	//     sessions = sessionsCursor.fetch();
-	// }else{
-	//     sessions = Session.get("sessionSearchResults");
-	// }
-	// var count = 0;
-	// for(var i = 0; i < sessions.length; i++){
-	//     var passed = (nullNames.indexOf(sessions[i].name) === -1);
-	//     if(showValid) passed = passed && sessions[i].papers.length > 2;
-	//     if(showUnapproved) passed = passed && !sessions[i].approved;
-
-	//     if(passed) count++;
-	// }
-	// return count;
     },
     
     sessionSearchKey: function(){
