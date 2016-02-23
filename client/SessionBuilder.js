@@ -230,12 +230,6 @@ Template.session.rendered = function(){
   });
 }
 
-Template.session.sessionName = function(){
-    var nullNames = ["Session not yet named", "Not named yet", "", " ", "  ", "   ", undefined];
-    if (nullNames.indexOf(this.name) != -1) return "Session not yet named";
-    return this.name;
-};
-
 
 Template.paperSession.helpers({
     numPapersInSession:  function(){
@@ -820,6 +814,22 @@ function updateIsDisplayedSession(sessionID, isDisplayed){
 * Session Template Helpers
 ********************************************************************/
 Template.session.helpers({
+    top : function (){
+	var watchedSessions = Session.get("sessionsWatched");
+	return watchedSessions[this._id].position.top;
+    },
+    
+    left: function (){
+	var watchedSessions = Session.get("sessionsWatched");
+	return watchedSessions[this._id].position.left;
+    },
+
+    sessionName : function(){
+	var nullNames = ["Session not yet named", "Not named yet", "", " ", "  ", "   ", undefined];
+	if (nullNames.indexOf(this.name) != -1) return "Session not yet named";
+	return this.name;
+    },
+
     sessionPapers : function(){
 	var paperIDs = this.papers;
 	var papers = Papers.find({_id: {$in: paperIDs}});
@@ -898,15 +908,6 @@ Template.session.events({
 });
 
 
-Template.session.top = function (){
-    var watchedSessions = Session.get("sessionsWatched");
-    return watchedSessions[this._id].position.top;
-};
-
-Template.session.left = function (){
-    var watchedSessions = Session.get("sessionsWatched");
-    return watchedSessions[this._id].position.left;
-};
 
 function shortenName(name){
     var na = name.split(" ");
