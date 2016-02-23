@@ -1,3 +1,11 @@
+//////////////////////////////////////////////////////////////////////////////
+// This is Opty.
+//
+// Opty uses a heuristic algorithm to simulate optimal session selection, that:
+// 1. Which candidate sessions to include as selected sessions, such that no paper ends up in more than 1 selected session
+// 2. Provide feedback in the form of 'Used Count' to show which papers won't be placed in an actual session (e.g., will be orphan'ed), given the current set of candidate sessions. You could think of these papers as ones that need "better groupings" if they are to not be orphaned.
+//////////////////////////////////////////////////////////////////////////////
+
 Session.set("optSessions", []);
 Session.set("summaryStats", []);
 Session.set("usedCount", []);

@@ -83,14 +83,9 @@ function getSessions(){
 
 
 
-/********************************************************************
-* Attaches sortable to idea and cluster lists, new cluster area.
-********************************************************************/
 Template.SessionBuilder.rendered = function(){
     console.log("rendered");
-    //$('.menu-link').bigSlide();
     $('#directions').hide();
-    // //Attach sortable to the new session creation drop area
     
     // accept dragged in sessions
     $('#sessionarea').droppable({
@@ -234,81 +229,6 @@ Template.session.rendered = function(){
       grid: [5, 5] 
   });
 }
-
-/********************************************************************
-* Session Builder Interface Template Helpers
-********************************************************************/
-
-// Template.SessionBuilder.countDisplays = function(keywordOption){
-//     var papers;
-    
-//     if(!Template.SessionBuilder.inputIsNotEmpty()){
-// 	var ret = Papers.find({active: true});
-// 	ret.observeChanges({
-// 	    added: function (id, fields) {
-// 		console.log("", 'added', id, fields);
-// 	    },
-	    
-// 	    changed: function (id, fields) {
-// 		console.log("", 'changed', id, fields);
-// 	    },
-	    
-// 	    movedBefore: function (id, before) {
-// 		console.log("", 'movedBefore', id, before);
-// 	    },
-	    
-// 	    removed: function (id) {
-// 		console.log("", 'removed', id);
-// 	    }
-// 	});
-
-
-	
-// 	papers = ret.fetch();
-//     } else {
-// 	papers = Session.get("searchResults");
-// //	console.log(papers);
-//     }
-
-//     if(!papers) return;
-    
-//     var keyword = keywordOption.toString();
-//     if(!keywordOption) keyword = Session.get('keywordFilter')
-
-//     if(keyword != "All"){
-// 	papers = papers.filter(function(x) { return x.keywordList.indexOf(keyword) != -1});
-//     }
-    
-//     var withoutApproved = Session.get("withoutApprovedSession");
-//     var withoutTwoApproved = Session.get("withoutTwoApprovedSessions");
-//     var withoutSession = Session.get("withoutSession");
-    
-//     var count = 0;
-//     for(var i = 0; i < papers.length; i++){
-// 	var p = papers[i];
-// 	var matchedSessions;
-	
-// 	if(!withoutApproved && !withoutSession && !withoutTwoApproved) {
-// 	    count++;
-// 	    continue;
-// 	}else if(withoutSession && !withoutApproved && !withoutTwoApproved){
-// 	    matchedSessions =  wellFormedSessions();
-// 	}else {
-// 	    matchedSessions =  approvedSessions();
-// 	}
-	
-// 	if(!withoutTwoApproved){
-// 	    if(unsatPapers([p], matchedSessions).length > 0) count++;
-// 	}else{ // without two approved
-// 	    if(unsatKPapers([p], matchedSessions, 2).length > 0) count++;
-// 	}
-//     }
-
-//     return count;
-// };
-
-
-
 
 Template.session.sessionName = function(){
     var nullNames = ["Session not yet named", "Not named yet", "", " ", "  ", "   ", undefined];
