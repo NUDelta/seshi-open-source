@@ -6,7 +6,6 @@ Some packages you will probably need (or at least, are in use now):
      accounts-base            1.2.2  A user account system
      accounts-password        1.1.4  Password support for accounts
      easy:search              2.0.8  Easy-to-use search with Blaze Components 
-     fortawesome:fontawesome  4.5.0  Font Awesome (official): 500+ scalable vector...
      iron:router              1.0.12  Routing specifically designed for Meteor
      jquery                   1.11.4  Manipulate the DOM using CSS selectors
      mizzao:bootstrap-3       3.3.1_1  HTML, CSS, and JS framework for developing ...
