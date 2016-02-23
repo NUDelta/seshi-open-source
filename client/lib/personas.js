@@ -1,3 +1,4 @@
 personaList = [
-"Crowdsourcing"
+    "Crowdsourcing",
+    "Social Computing"
 ]
