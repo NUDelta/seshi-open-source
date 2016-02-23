@@ -434,7 +434,6 @@ Template.SessionBuilder.helpers({
 	
 	if(keyword != "All"){
 	    papers = papers.filter(function(x) { 
-		console.log(x, x.keywordList, keyword);
 		return x.keywordList.indexOf(keyword) != -1});
 	}
 	
@@ -590,7 +589,6 @@ Template.SessionBuilder.helpers({
 	    return false;
 	}
 	
-	console.log(this, this.keywordList, Session.get('keywordFilter'));	
 	// only return papers that have the set keyword
 	if(Session.get('keywordFilter') != "All" && 
 	   this.keywordList.indexOf(Session.get('keywordFilter')) == -1){
@@ -1552,9 +1550,9 @@ Template.SessionBuilder.events({
     'click .keyword-option' : function (e, u) {
 	Session.set("keywordFilter", $(e.target).text().substring(0, $(e.target).text().indexOf(" (")));
 
-	console.log("clicked keyword-option")
-	console.log($(e.target).text())
-	console.log(Session.get("keywordFilter"))
+//	console.log("clicked keyword-option")
+//	console.log($(e.target).text())
+//	console.log(Session.get("keywordFilter"))
     },
     
     'click #sessionSortAZ' : function(){
