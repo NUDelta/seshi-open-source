@@ -136,13 +136,13 @@
 
 	<div id="session-list">
 	  {{#if sessionInputIsNotEmpty}}
-  	  {{#esEach index="sessions" id="search" options=sesOptions}}
+	  {{#each sessionSearchResults}}
           {{#if passSessionFilters}}
 	  <div>
 {{> sessionInList}}
 </div>
 	{{/if}}
-	{{/esEach}} 
+	{{/each}} 
 	  {{else}}
 	    {{#each sessions}}
                  {{#if passSessionFilters}}
