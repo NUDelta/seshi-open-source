@@ -1,6 +1,25 @@
-/* CSS declarations go here */
+/*
+      Copyright (c) 2014-2016 Northwestern University
+
+      Permission is hereby granted, free of charge, to any person obtaining a copy
+      of this software and associated documentation files (the "Software"), to deal
+      in the Software without restriction, including without limitation the rights
+      to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+      copies of the Software, and to permit persons to whom the Software is
+      furnished to do so, subject to the following conditions:
+      The above copyright notice and this permission notice shall be included in all
+      copies or substantial portions of the Software.
+
+      THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+      IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+      FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+      AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+      LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+      OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+      SOFTWARE.
+*/
+
 body{
-/*	font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue';*/
     font-family: Helvetica, Arial, sans-serif;
     height: 100%;
 }
@@ -43,7 +62,7 @@ body{
 }
 
 #sessionarea .ui-state-hover {
-    background: rgba(216,235,250, 0.9); /*orange;*/
+    background: rgba(216,235,250, 0.9); 
 }
 
 .dragged-paper {
@@ -100,7 +119,6 @@ body{
 .abstract {
     font-size: 90%;
     margin-top: 5px;
-/*    display: none; */
 }
 
 .morelink {
@@ -112,7 +130,6 @@ body{
 }
 
 .session-paper-container {
-/*    display: none; */
 }
 
 .watch-session-button {
@@ -123,44 +140,9 @@ body{
 
 .unwatch-session-button {
     position: relative;
- /*   right: 10px;*/
     float: right;
 }
 
-/*.toggle-abstracts {
-    position: relative;
-    right: 10px;
-    float: right;
-}
-
-.toggle-keywords {
-    position: relative;
-    margin-right: 5px;
-    right: 10px;
-    float: right;
-}
-
-
-.toggle-authors { 
-   position: relative;
-   margin-right: 5px;
-    right: 10px;
-    float: right;
-}
-
-.toggle-paper-sessions {
-   position: relative;
-   margin-right: 5px;
-    right: 10px;
-    float: right;
-}
-
-.toggle-papers {
-    position: relative;
-    right: 10px;
-    float: right;
-}
-*/
 
 li {
     -webkit-touch-callout: none;
@@ -229,7 +211,6 @@ body {
     margin-top: 2px;
 }
 .session-contents {
-/*   padding-top: 30px;*/
 }
 
 .approval {
@@ -243,20 +224,14 @@ body {
 #left, #middle{
 	height: 100%;
 	border-right: 1px solid black;
-/*	border-bottom: 1px solid black;*/
-	/*-webkit-box-shadow: 1px 0px 2px 0px rgba(50, 50, 50, 0.25);
-	-moz-box-shadow:    1px 0px 2px 0px rgba(50, 50, 50, 0.25);
-	box-shadow:         1px 0px 2px 0px rgba(50, 50, 50, 0.25);*/
 }
 
  #sessionarea { 
-/*     height: 100%; */
      min-height: 720px;
  } 
 
 
 #left, #middle, #right {
-    /*    min-height: 808px; */
       min-height: 760px;
       height: 100%; 
 }
@@ -273,8 +248,6 @@ body {
 }
 
 #directions{
-	/*position: absolute;
-	background-color: white;*/
 	opacity: 1;
 	font-size: 16px;
 }
@@ -466,7 +439,6 @@ i {
 	border: dotted 1px black;
 	font-size: 17px;
 	text-align: center;
-	/*border-radius: 5px;*/
 	padding: 10px;
 }
 
@@ -474,9 +446,6 @@ i {
 	width: 70%;
 }
 
-/*#clusterprompt{
-	margin-top: 20px;
-}*/
 
 /** opty **/
 .opt-session {
